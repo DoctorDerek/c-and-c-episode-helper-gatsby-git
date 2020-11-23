@@ -51,9 +51,10 @@ const Post = (props) => {
                 null
               )}
             />
-            <div className="post-content">
+            <p>These are episode-specific notes:</p>
+            <blockquote className="post-content">
               {htmlToReact(_.get(props, "pageContext.html", null))}
-            </div>
+            </blockquote>
             <YouTubeTags />
             <TwitchLiveShow />
             <EpisodeDescription />
