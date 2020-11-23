@@ -3,6 +3,7 @@ import DateHeading from "./DateHeading.component"
 import EpisodeDescription from "./EpisodeDescription.component"
 import EpisodeHighlights from "./EpisodeHighlights.component"
 import TwitchLiveShow from "./TwitchLiveShow.component"
+import YouTubeTags from "./YouTubeTags.component"
 import YouTubeTutorial from "./YouTubeTutorial.component"
 
 export {
@@ -11,6 +12,7 @@ export {
   EpisodeDescription,
   EpisodeHighlights,
   TwitchLiveShow,
+  YouTubeTags,
   YouTubeTutorial,
 }
 
@@ -20,5 +22,6 @@ export default {
   EpisodeDescription,
   EpisodeHighlights,
   TwitchLiveShow,
+  YouTubeTags,
   YouTubeTutorial,
 }

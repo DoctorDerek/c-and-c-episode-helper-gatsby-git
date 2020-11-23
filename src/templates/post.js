@@ -45,6 +45,11 @@ const Post = (props) => {
           <article className="post post-full">
             <DateHeading
               date={_.get(props, "pageContext.frontmatter.date", null)}
+              episodeNumber={_.get(
+                props,
+                "pageContext.frontmatter.episodeNumber",
+                null
+              )}
             />
             <div className="post-content">
               {htmlToReact(_.get(props, "pageContext.html", null))}
