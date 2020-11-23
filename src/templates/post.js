@@ -40,7 +40,7 @@ const Post = (props) => {
           image={_.get(props, "pageContext.frontmatter.content_img_path", null)}
         />
       )}
-      <div id="content" className="site-content">
+      <div id="content" className="site-content chillhop-and-code">
         <main id="main" className="site-main inner">
           <article className="post post-full">
             <DateHeading
@@ -51,7 +51,7 @@ const Post = (props) => {
                 null
               )}
             />
-            <p>These are episode-specific notes:</p>
+            <h3 key="Episode Notes">Episode-specific notes:</h3>
             <blockquote className="post-content">
               {htmlToReact(_.get(props, "pageContext.html", null))}
             </blockquote>

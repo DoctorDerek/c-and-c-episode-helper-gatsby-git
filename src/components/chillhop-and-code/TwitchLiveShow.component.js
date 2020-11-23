@@ -1,7 +1,7 @@
 import React from "react"
 
 const TwitchLiveShow = () => (
-  <section>
+  <section key="Twitch Live Show">
     <h2>TWITCH LIVE SHOW</h2>
 
     <h3>Live Twitch chapter-based categories & titles (140 characters):</h3>

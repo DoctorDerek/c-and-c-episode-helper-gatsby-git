@@ -1,4 +1,10 @@
-.chillhop-and-code h1 {
-  /* No styles */
-  background-color: #9e9e9e;
+.chillhop-and-code {
+  h2 {
+    border: 1px solid black;
+    border-width: 1px 0 1px 0;
+  }
+  blockquote {
+    font-style: normal;
+    font-size: 1em;
+  }
 }
