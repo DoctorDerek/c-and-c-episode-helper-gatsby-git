@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2015
+  },
+  "rules": {
+    "jsx-a11y/accessible-emoji": "off"
+  }
+}

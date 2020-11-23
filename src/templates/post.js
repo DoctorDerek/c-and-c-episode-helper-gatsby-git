@@ -14,6 +14,7 @@ import DateHeading from "../components/chillhop-and-code/DateHeading.component"
 import EpisodeDescription from "../components/chillhop-and-code/EpisodeDescription.component"
 import EpisodeHighlights from "../components/chillhop-and-code/EpisodeHighlights.component"
 import TwitchLiveShow from "../components/chillhop-and-code/TwitchLiveShow.component"
+import YouTubeTags from "../components/chillhop-and-code/YouTubeTags.component"
 import YouTubeTutorial from "../components/chillhop-and-code/YouTubeTutorial.component"
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
@@ -42,40 +43,18 @@ const Post = (props) => {
       <div id="content" className="site-content">
         <main id="main" className="site-main inner">
           <article className="post post-full">
-            <header className="post-header">
-              <h1 className="post-title">
-                {_.get(props, "pageContext.frontmatter.title", null)}
-              </h1>
-              <div className="post-meta">
-                Published on{" "}
-                <time
-                  className="published"
-                  dateTime={moment(
-                    _.get(props, "pageContext.frontmatter.date", null)
-                  ).strftime("%Y-%m-%d %H:%M")}
-                >
-                  {moment(
-                    _.get(props, "pageContext.frontmatter.date", null)
-                  ).strftime("%B %d, %Y")}
-                </time>
-              </div>
-            </header>
-            {_.get(props, "pageContext.frontmatter.subtitle", null) && (
-              <div className="post-subtitle">
-                {htmlToReact(
-                  _.get(props, "pageContext.frontmatter.subtitle", null)
-                )}
-              </div>
-            )}
+            <DateHeading
+              date={_.get(props, "pageContext.frontmatter.date", null)}
+            />
             <div className="post-content">
               {htmlToReact(_.get(props, "pageContext.html", null))}
-              <DateHeading />
-              <TwitchLiveShow />
-              <EpisodeDescription />
-              <EpisodeHighlights />
-              <ADDHighlights />
-              <YouTubeTutorial />
             </div>
+            <YouTubeTags />
+            <TwitchLiveShow />
+            <EpisodeDescription />
+            <EpisodeHighlights />
+            <ADDHighlights />
+            <YouTubeTutorial />
           </article>
         </main>
         <Footer {...props} />
