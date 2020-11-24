@@ -97,6 +97,46 @@ const Post = (props) => {
                 "pageContext.frontmatter.titleForHour8",
                 null
               )}
+              segmentForHour1={_.get(
+                props,
+                "pageContext.frontmatter.segmentForHour1",
+                null
+              )}
+              segmentForHour2={_.get(
+                props,
+                "pageContext.frontmatter.segmentForHour2",
+                null
+              )}
+              segmentForHour3={_.get(
+                props,
+                "pageContext.frontmatter.segmentForHour3",
+                null
+              )}
+              segmentForHour4={_.get(
+                props,
+                "pageContext.frontmatter.segmentForHour4",
+                null
+              )}
+              segmentForHour5={_.get(
+                props,
+                "pageContext.frontmatter.segmentForHour5",
+                null
+              )}
+              segmentForHour6={_.get(
+                props,
+                "pageContext.frontmatter.segmentForHour6",
+                null
+              )}
+              segmentForHour7={_.get(
+                props,
+                "pageContext.frontmatter.segmentForHour7",
+                null
+              )}
+              segmentForHour8={_.get(
+                props,
+                "pageContext.frontmatter.segmentForHour8",
+                null
+              )}
             />
             <EpisodeDescription />
             <EpisodeHighlights />

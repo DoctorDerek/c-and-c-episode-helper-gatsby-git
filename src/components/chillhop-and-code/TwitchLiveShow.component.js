@@ -9,10 +9,56 @@ const TwitchLiveShow = ({
   titleForHour6,
   titleForHour7,
   titleForHour8,
+  segmentForHour1,
+  segmentForHour2,
+  segmentForHour3,
+  segmentForHour4,
+  segmentForHour5,
+  segmentForHour6,
+  segmentForHour7,
+  segmentForHour8,
 }) => {
+  // Template constants to link segments to hours
+  const segmentsLookup = {
+    "Ask Doctor Derek": {
+      prefix: "👨‍⚕️💬🧠",
+      postfix:
+        "❓ Ask Doctor Derek 💪 Health & Coding 🙋‍♂️ Ask me anything 💙 Chillhop & Code 📺",
+    },
+    "Let's Learn": {
+      prefix: "🏫💻🎓",
+      postfix:
+        "💯 Let's Learn: JavaScript Coursework + Commentary 💙 Chillhop & Code 📺 relaxing programming",
+    },
+    "Let's Blog": {
+      prefix: "👨‍💻📝📘",
+      postfix:
+        "✍ Let's Blog: JavaScript Tutorials 💙 Chillhop & Code 📺 relaxing programming",
+    },
+    "Let's Play": {
+      prefix: "👾🎮🎰",
+      postfix:
+        "🎯 Let's Play: JavaScript & CSS Games 💙 Chillhop & Code 📺 relaxing programming",
+    },
+    "Let's Build Websites": {
+      prefix: "🏗️🕸🔥",
+      postfix:
+        "💸 Let's Build Websites: Real Client Work 💙 Chillhop & Code 📺 relaxing programming",
+    },
+    Twitch: {
+      prefix: "💙 Chillhop & Code 📺",
+      postfix: "👉 DoctorDerek.com 👈",
+    },
+  }
   // Map each hour # to the content with an ES6 Map
-  const chapterTitleMap = new Map()
   // Don't use an object because we want to iterate
+  const chapterTitleMap = new Map()
+  // Add hours 0 and 9 for ease of reference:
+  chapterTitleMap.set(0, {
+    title: `JavaScript tutorials, coursework & live
+        programming over jazzy / lo-fi beats to relax / study to`,
+    segment: "Twitch",
+  })
   chapterTitleMap.set(1, { title: titleForHour1 })
   chapterTitleMap.set(2, { title: titleForHour2 })
   chapterTitleMap.set(3, { title: titleForHour3 })
@@ -21,10 +67,14 @@ const TwitchLiveShow = ({
   chapterTitleMap.set(6, { title: titleForHour6 })
   chapterTitleMap.set(7, { title: titleForHour7 })
   chapterTitleMap.set(8, { title: titleForHour8 })
+  chapterTitleMap.set(9, { title: "hour0" })
+
   for (const [hour, chapter] of chapterTitleMap) {
+    if (chapter.segment) {
+    }
     // Check for duplicate hours
     if (chapter.title) {
-      for (let i = 1; i <= 8; i++) {
+      for (const i of chapterTitleMap.keys()) {
         // Loop through each possible hour
         if (chapter.title.toLocaleLowerCase() === `hour${i}`) {
           chapterTitleMap.set(hour, chapterTitleMap.get(i))
@@ -88,7 +138,7 @@ const TwitchLiveShow = ({
         Chillhop & Code 📺 relaxing programming
       </h5>
 
-      <h4 key="Label for Hour 6">Hour 6 Let's Learn: Science & Technology</h4>
+      <h4 key="Label for Hour 6">Hour 6 {chapterTitleMap.get(6).label}</h4>
 
       <h5 key="Title for Hour 6">
         🏗️🕸🔥 {chapterTitleMap.get(6).title} 💸 Let's Build Websites: Real
