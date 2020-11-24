@@ -18,8 +18,8 @@ const TwitchLiveShow = ({
   segmentForHour7,
   segmentForHour8,
 }) => {
-  // Template constants to link segments to hours
-  const segmentsLookup = {
+  // Object literal to link each hour's segments with the title template
+  const segmentLookupLiteral = {
     "Ask Doctor Derek": {
       prefix: "👨‍⚕️💬🧠",
       postfix:
@@ -59,18 +59,24 @@ const TwitchLiveShow = ({
         programming over jazzy / lo-fi beats to relax / study to`,
     segment: "Twitch",
   })
-  chapterTitleMap.set(1, { title: titleForHour1 })
-  chapterTitleMap.set(2, { title: titleForHour2 })
-  chapterTitleMap.set(3, { title: titleForHour3 })
-  chapterTitleMap.set(4, { title: titleForHour4 })
-  chapterTitleMap.set(5, { title: titleForHour5 })
-  chapterTitleMap.set(6, { title: titleForHour6 })
-  chapterTitleMap.set(7, { title: titleForHour7 })
-  chapterTitleMap.set(8, { title: titleForHour8 })
+  chapterTitleMap.set(1, { title: titleForHour1, segment: segmentForHour1 })
+  chapterTitleMap.set(2, { title: titleForHour2, segment: segmentForHour2 })
+  chapterTitleMap.set(3, { title: titleForHour3, segment: segmentForHour3 })
+  chapterTitleMap.set(4, { title: titleForHour4, segment: segmentForHour4 })
+  chapterTitleMap.set(5, { title: titleForHour5, segment: segmentForHour5 })
+  chapterTitleMap.set(6, { title: titleForHour6, segment: segmentForHour6 })
+  chapterTitleMap.set(7, { title: titleForHour7, segment: segmentForHour7 })
+  chapterTitleMap.set(8, { title: titleForHour8, segment: segmentForHour8 })
   chapterTitleMap.set(9, { title: "hour0" })
 
   for (const [hour, chapter] of chapterTitleMap) {
     if (chapter.segment) {
+      // This is object composition (functional programming)
+      chapterTitleMap.set(hour, {
+        ...chapter,
+        ...segmentLookupLiteral[chapter.segment],
+      })
+      // The result is each hour is mapped to an object containing all of the properties it had before (chapter & segment) as well as the looked-up properties (the prefix and postfix) from the lookup literal object. 👍
     }
     // Check for duplicate hours
     if (chapter.title) {
