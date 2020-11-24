@@ -1,6 +1,15 @@
 import React from "react"
 
-const TwitchLiveShow = () => (
+const TwitchLiveShow = ({
+  titleForHour1,
+  titleForHour2,
+  titleForHour3,
+  titleForHour4,
+  titleForHour5,
+  titleForHour6,
+  titleForHour7,
+  titleForHour8,
+}) => (
   <section key="Twitch Live Show">
     <h2>TWITCH LIVE SHOW</h2>
 
@@ -18,8 +27,8 @@ const TwitchLiveShow = () => (
     <h4 key="Label for Hour 1">Hour 1 Ask Doctor Derek: Just Chatting</h4>
 
     <h5 key="Title for Hour 1">
-      👨‍⚕️💬🧠 Why I LOVE Fluoride But Drink Filtered Water ❓ Ask Doctor Derek 💪
-      Health & Coding 🙋‍♂️ Ask me anything 💙 Chillhop & Code 📺
+      👨‍⚕️💬🧠 {titleForHour1} ❓ Ask Doctor Derek 💪 Health & Coding 🙋‍♂️ Ask me
+      anything 💙 Chillhop & Code 📺
     </h5>
 
     <h4 key="Label for Hour 2">
@@ -27,16 +36,15 @@ const TwitchLiveShow = () => (
     </h4>
 
     <h5 key="Title for Hour 2">
-      🏫💻🎓 Commentary on: Complete React Developer by @AndreiNeagoie 💯 Let's
-      Learn: JavaScript Coursework + Commentary 💙 Chillhop & Code 📺 relaxing
-      programming
+      🏫💻🎓 {titleForHour2} 💯 Let's Learn: JavaScript Coursework + Commentary
+      💙 Chillhop & Code 📺 relaxing programming
     </h5>
 
     <h4 key="Label for Hour 3">Hours 3 & 7 Let's Blog: Just Chatting</h4>
 
     <h5 key="Title for Hour 3">
-      👨‍💻📝📘 Tour of Articles about Technology by Doctor Derek ✍ Let's Blog:
-      JavaScript Tutorials 💙 Chillhop & Code 📺 relaxing programming
+      👨‍💻📝📘 {titleForHour3} ✍ Let's Blog: JavaScript Tutorials 💙 Chillhop &
+      Code 📺 relaxing programming
     </h5>
 
     <h4 key="Label for Hour 4">
@@ -44,16 +52,15 @@ const TwitchLiveShow = () => (
     </h4>
 
     <h5 key="Title for Hour 4">
-      👾🎮🎰 Let's Play: Sourcery & Nester (HTML & Emmet Games) 🎯 Let's Play:
-      JavaScript & CSS Games 💙 Chillhop & Code 📺 relaxing programming
+      👾🎮🎰 {titleForHour4} 🎯 Let's Play: JavaScript & CSS Games 💙 Chillhop &
+      Code 📺 relaxing programming
     </h5>
 
     <h4 key="Label for Hour 5">Hour 5 Let's Build Websites: Just Chatting</h4>
 
     <h5 key="Title for Hour 5">
-      🏗️🕸🔥 Let's Build: A Jamstack Site for My Episode Descriptions 💸 Let's
-      Build Websites: Real Client Work 💙 Chillhop & Code 📺 relaxing
-      programming
+      🏗️🕸🔥 {titleForHour5} 💸 Let's Build Websites: Real Client Work 💙
+      Chillhop & Code 📺 relaxing programming
     </h5>
 
     <h4 key="Label for Hour 9">
