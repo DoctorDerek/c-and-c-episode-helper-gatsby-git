@@ -15,15 +15,21 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
   return (
     <section key="Episode Description">
       <h2>EPISODE DESCRIPTION</h2>
-      <blockquote key="1">
+      <blockquote>
         💙 Chillhop & Code 📺 episode #{episodeNumber} (2020-11-20)
         <br />
         {Array.from(chapterTitleMap.entries()).map(([hour, chapter]) => {
+          if (chapter.segment === "Pre/Post-Presentation") {
+            return
+          }
           // Ask Doctor Derek is different in the episode description:
           if (chapter.segment === "Ask Doctor Derek") {
             chapter.segmentDescription = chapter.segment
             chapter.postfix = "❓ Health & Coding 💪"
             chapter.title = `💬 ${chapter.title} ❓`
+          }
+          if (chapter.segment === "Let's Learn") {
+            chapter.segmentDescription = "Let's Learn: JavaScript Coursework*"
           }
           const { title, prefix, postfix, segmentDescription } = chapter
           return (
@@ -35,39 +41,6 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
             </React.Fragment>
           )
         })}
-      </blockquote>
-      <blockquote key="2">
-        💙 Chillhop & Code 📺 episode #0016 (2020-11-20)
-        <br />
-        Hour 1 👨‍⚕️💬🧠 Ask Doctor Derek ❓ Health & Coding 💪
-        <br />
-        ➡️➡️➡️ 💬 Why I LOVE Fluoride But Drink Filtered Water ❓<br />
-        Hour 2 🏫💻🎓 Let's Learn: JavaScript Coursework* 💯
-        <br />
-        ➡️➡️➡️ Commentary on: Complete React Developer by @AndreiNeagoie
-        <br />
-        Hour 3 👨‍💻📝📘 Let's Blog: JavaScript Tutorials ✍<br />
-        ➡️➡️➡️ Topic: Tour of Articles about Technology by Doctor Derek
-        <br />
-        Hour 4 👾🎮🎰 Let's Play: JavaScript & CSS Games 🎯
-        <br />
-        ➡️➡️➡️ Let's Play: Sourcery & Nester (HTML & Emmet Games)
-        <br />
-        Hour 5 🏗️🕸🔥 Let's Build Websites: Real Client Work 💸
-        <br />
-        ➡️➡️➡️ Let's Build: A Jamstack Site for My Episode Descriptions
-        <br />
-        Hour 6 🏫💻🎓 Let's Learn: JavaScript Coursework* 💯
-        <br />
-        ➡️➡️➡️ Commentary on: Complete React Developer by @AndreiNeagoie
-        <br />
-        Hour 7 👨‍💻📝📘 Let's Blog: JavaScript Tutorials ✍<br />
-        ➡️➡️➡️ Topic: Tour of Articles about Technology by Doctor Derek
-        <br />
-        Hour 8 👾🎮🎰 Let's Play: JavaScript & CSS Games 🎯
-        <br />
-        ➡️➡️➡️ Let's Play: Sourcery & Nester (HTML & Emmet Games)
-        <br />
         <br />
         *Support the course:
         https://www.udemy.com/course/complete-react-developer-zero-to-mastery/
