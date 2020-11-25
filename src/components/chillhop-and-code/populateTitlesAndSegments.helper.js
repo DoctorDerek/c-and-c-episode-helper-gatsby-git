@@ -1,8 +1,8 @@
 import _ from "lodash"
 
-const titlesAndSegments = { FIRST_HOUR: 1, MAX_HOURS: 8 }
-
 const populateTitlesAndSegments = (props) => {
+  const titlesAndSegments = { FIRST_HOUR: 1, MAX_HOURS: 8 }
+
   for (
     let i = titlesAndSegments.FIRST_HOUR;
     i <= titlesAndSegments.MAX_HOURS;
@@ -19,6 +19,8 @@ const populateTitlesAndSegments = (props) => {
       null
     )
   }
+
+  return titlesAndSegments
 }
 
 export default populateTitlesAndSegments
