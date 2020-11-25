@@ -47,7 +47,7 @@ const populateChapterTitleMap = (props) => {
         programming over jazzy / lo-fi beats to relax / study to`,
     segment: "Pre/Post-Presentation",
   })
-  for (let i = props.FIRST_HOUR; i < props.MAX_HOURS; i++) {
+  for (let i = props.FIRST_HOUR; i <= props.MAX_HOURS; i++) {
     chapterTitleMap.set(i, {
       title: props[`titleForHour${i}`],
       segment: props[`segmentForHour${i}`],
