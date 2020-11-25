@@ -45,6 +45,14 @@ const Post = (props) => {
       null
     )
   }
+
+  // Retrieve some props from the front matter using lodash:
+  const episodeNumber = _.get(
+    props,
+    "pageContext.frontmatter.episodeNumber",
+    null
+  )
+
   return (
     <Layout {...props}>
       {_.get(props, "pageContext.frontmatter.hide_header", null) === true ? (
@@ -62,11 +70,7 @@ const Post = (props) => {
           <article className="post post-full">
             <DateHeading
               date={_.get(props, "pageContext.frontmatter.date", null)}
-              episodeNumber={_.get(
-                props,
-                "pageContext.frontmatter.episodeNumber",
-                null
-              )}
+              episodeNumber
             />
             <h3 key="Episode Notes">Episode-specific notes:</h3>
             <blockquote className="post-content">
@@ -74,7 +78,7 @@ const Post = (props) => {
             </blockquote>
             <YouTubeTags />
             <TwitchLiveShow {...titlesAndSegments} />
-            <EpisodeDescription />
+            <EpisodeDescription episodeNumber {...titlesAndSegments} />
             <EpisodeHighlights />
             <ADDHighlights />
             <YouTubeTutorial />
