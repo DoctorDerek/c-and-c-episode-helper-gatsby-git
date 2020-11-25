@@ -2,8 +2,9 @@ import React from "react"
 
 import populateChapterTitleMap from "./populateChapterTitleMap.helper"
 
-const EpisodeDescription = ({ episodeNumber, ...props }) => {
+const EpisodeDescription = ({ ...props }) => {
   const chapterTitleMap = populateChapterTitleMap(props)
+  const { episodeNumber } = props
 
   /*       
       <br />

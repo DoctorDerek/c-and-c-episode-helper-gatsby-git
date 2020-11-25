@@ -55,7 +55,7 @@ const Post = (props) => {
           <article className="post post-full">
             <DateHeading
               date={_.get(props, "pageContext.frontmatter.date", null)}
-              episodeNumber
+              episodeNumber={episodeNumber}
             />
             <h3 key="Episode Notes">Episode-specific notes:</h3>
             <blockquote className="post-content">
@@ -63,7 +63,10 @@ const Post = (props) => {
             </blockquote>
             <YouTubeTags />
             <TwitchLiveShow {...titlesAndSegments} />
-            <EpisodeDescription episodeNumber {...titlesAndSegments} />
+            <EpisodeDescription
+              episodeNumber={episodeNumber}
+              {...titlesAndSegments}
+            />
             <EpisodeHighlights />
             <ADDHighlights />
             <YouTubeTutorial />
