@@ -1,61 +1,44 @@
 import React from "react"
 
-const TwitchLiveShow = ({
-  titleForHour1,
-  titleForHour2,
-  titleForHour3,
-  titleForHour4,
-  titleForHour5,
-  titleForHour6,
-  titleForHour7,
-  titleForHour8,
-  segmentForHour1,
-  segmentForHour2,
-  segmentForHour3,
-  segmentForHour4,
-  segmentForHour5,
-  segmentForHour6,
-  segmentForHour7,
-  segmentForHour8,
-}) => {
-  // Categories alternate every hour to create "chapters" on Twitch
-  const CATEGORIES = ["Science & Technology", "Just Chatting"]
+// Categories alternate every hour to create "chapters" on Twitch
+const CATEGORIES = ["Science & Technology", "Just Chatting"]
 
-  // Object literal to link each hour's segments with the title template
-  const SEGMENT_LOOKUP = {
-    "Ask Doctor Derek": {
-      prefix: "👨‍⚕️💬🧠",
-      postfix:
-        "❓ Ask Doctor Derek 💪 Health & Coding 🙋‍♂️ Ask me anything 💙 Chillhop & Code 📺",
-    },
-    "Let's Learn": {
-      prefix: "🏫💻🎓",
-      postfix:
-        "💯 Let's Learn: JavaScript Coursework + Commentary 💙 Chillhop & Code 📺 relaxing programming",
-    },
-    "Let's Blog": {
-      prefix: "👨‍💻📝📘",
-      postfix:
-        "✍ Let's Blog: JavaScript Tutorials 💙 Chillhop & Code 📺 relaxing programming",
-    },
-    "Let's Play": {
-      prefix: "👾🎮🎰",
-      postfix:
-        "🎯 Let's Play: JavaScript & CSS Games 💙 Chillhop & Code 📺 relaxing programming",
-    },
-    "Let's Build Websites": {
-      prefix: "🏗️🕸🔥",
-      postfix:
-        "💸 Let's Build Websites: Real Client Work 💙 Chillhop & Code 📺 relaxing programming",
-    },
-    "Pre/Post-Presentation": {
-      prefix: "💙 Chillhop & Code 📺",
-      postfix: "👉 DoctorDerek.com 👈",
-    },
-  }
+// Object literal to link each hour's segments with the title template
+const SEGMENT_LOOKUP = {
+  "Ask Doctor Derek": {
+    prefix: "👨‍⚕️💬🧠",
+    postfix:
+      "❓ Ask Doctor Derek 💪 Health & Coding 🙋‍♂️ Ask me anything 💙 Chillhop & Code 📺",
+  },
+  "Let's Learn": {
+    prefix: "🏫💻🎓",
+    postfix:
+      "💯 Let's Learn: JavaScript Coursework + Commentary 💙 Chillhop & Code 📺 relaxing programming",
+  },
+  "Let's Blog": {
+    prefix: "👨‍💻📝📘",
+    postfix:
+      "✍ Let's Blog: JavaScript Tutorials 💙 Chillhop & Code 📺 relaxing programming",
+  },
+  "Let's Play": {
+    prefix: "👾🎮🎰",
+    postfix:
+      "🎯 Let's Play: JavaScript & CSS Games 💙 Chillhop & Code 📺 relaxing programming",
+  },
+  "Let's Build Websites": {
+    prefix: "🏗️🕸🔥",
+    postfix:
+      "💸 Let's Build Websites: Real Client Work 💙 Chillhop & Code 📺 relaxing programming",
+  },
+  "Pre/Post-Presentation": {
+    prefix: "💙 Chillhop & Code 📺",
+    postfix: "👉 DoctorDerek.com 👈",
+  },
+}
 
+const TwitchLiveShow = (props) => {
   // Map each hour # to the content with an ES6 Map
-  // Don't use an object because we want to iterate
+  // instead of an object because I want to iterate
   const chapterTitleMap = new Map()
   // Add hours 0 and 9 for ease of reference:
   chapterTitleMap.set(0, {
@@ -63,38 +46,12 @@ const TwitchLiveShow = ({
         programming over jazzy / lo-fi beats to relax / study to`,
     segment: "Pre/Post-Presentation",
   })
-  chapterTitleMap.set(1, {
-    title: titleForHour1,
-    segment: segmentForHour1,
-  })
-  chapterTitleMap.set(2, {
-    title: titleForHour2,
-    segment: segmentForHour2,
-  })
-  chapterTitleMap.set(3, {
-    title: titleForHour3,
-    segment: segmentForHour3,
-  })
-  chapterTitleMap.set(4, {
-    title: titleForHour4,
-    segment: segmentForHour4,
-  })
-  chapterTitleMap.set(5, {
-    title: titleForHour5,
-    segment: segmentForHour5,
-  })
-  chapterTitleMap.set(6, {
-    title: titleForHour6,
-    segment: segmentForHour6,
-  })
-  chapterTitleMap.set(7, {
-    title: titleForHour7,
-    segment: segmentForHour7,
-  })
-  chapterTitleMap.set(8, {
-    title: titleForHour8,
-    segment: segmentForHour8,
-  })
+  for (let i = props.FIRST_HOUR; i < props.MAX_HOURS; i++) {
+    chapterTitleMap.set(i, {
+      title: props[`titleForHour${i}`],
+      segment: props[`segmentForHour${i}`],
+    })
+  }
   chapterTitleMap.set(9, { title: "hour0" })
 
   for (const [hour, chapter] of chapterTitleMap) {

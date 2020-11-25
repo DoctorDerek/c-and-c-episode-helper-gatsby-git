@@ -28,6 +28,23 @@ export const query = graphql`
 `
 
 const Post = (props) => {
+  const titlesAndSegments = { FIRST_HOUR: 1, MAX_HOURS: 8 }
+  for (
+    let i = titlesAndSegments.FIRST_HOUR;
+    i < titlesAndSegments.MAX_HOURS;
+    i++
+  ) {
+    titlesAndSegments[`titleForHour${i}`] = _.get(
+      props,
+      `pageContext.frontmatter.titleForHour${i}`,
+      null
+    )
+    titlesAndSegments[`segmentForHour${i}`] = _.get(
+      props,
+      `pageContext.frontmatter.segmentForHour${i}`,
+      null
+    )
+  }
   return (
     <Layout {...props}>
       {_.get(props, "pageContext.frontmatter.hide_header", null) === true ? (
@@ -56,88 +73,7 @@ const Post = (props) => {
               {htmlToReact(_.get(props, "pageContext.html", null))}
             </blockquote>
             <YouTubeTags />
-            <TwitchLiveShow
-              titleForHour1={_.get(
-                props,
-                "pageContext.frontmatter.titleForHour1",
-                null
-              )}
-              titleForHour2={_.get(
-                props,
-                "pageContext.frontmatter.titleForHour2",
-                null
-              )}
-              titleForHour3={_.get(
-                props,
-                "pageContext.frontmatter.titleForHour3",
-                null
-              )}
-              titleForHour4={_.get(
-                props,
-                "pageContext.frontmatter.titleForHour4",
-                null
-              )}
-              titleForHour5={_.get(
-                props,
-                "pageContext.frontmatter.titleForHour5",
-                null
-              )}
-              titleForHour6={_.get(
-                props,
-                "pageContext.frontmatter.titleForHour6",
-                null
-              )}
-              titleForHour7={_.get(
-                props,
-                "pageContext.frontmatter.titleForHour7",
-                null
-              )}
-              titleForHour8={_.get(
-                props,
-                "pageContext.frontmatter.titleForHour8",
-                null
-              )}
-              segmentForHour1={_.get(
-                props,
-                "pageContext.frontmatter.segmentForHour1",
-                null
-              )}
-              segmentForHour2={_.get(
-                props,
-                "pageContext.frontmatter.segmentForHour2",
-                null
-              )}
-              segmentForHour3={_.get(
-                props,
-                "pageContext.frontmatter.segmentForHour3",
-                null
-              )}
-              segmentForHour4={_.get(
-                props,
-                "pageContext.frontmatter.segmentForHour4",
-                null
-              )}
-              segmentForHour5={_.get(
-                props,
-                "pageContext.frontmatter.segmentForHour5",
-                null
-              )}
-              segmentForHour6={_.get(
-                props,
-                "pageContext.frontmatter.segmentForHour6",
-                null
-              )}
-              segmentForHour7={_.get(
-                props,
-                "pageContext.frontmatter.segmentForHour7",
-                null
-              )}
-              segmentForHour8={_.get(
-                props,
-                "pageContext.frontmatter.segmentForHour8",
-                null
-              )}
-            />
+            <TwitchLiveShow {...titlesAndSegments} />
             <EpisodeDescription />
             <EpisodeHighlights />
             <ADDHighlights />
