@@ -1,29 +1,35 @@
+const SHOW_CONSTANTS = {
+  showName: "💙 Chillhop & Code 📺",
+  showDescription: "relaxing programming",
+}
+
 // Object literal to link each hour's segments with the title template
 const SEGMENT_LOOKUP = {
   "Ask Doctor Derek": {
     prefix: "👨‍⚕️💬🧠",
-    postfix:
-      "❓ Ask Doctor Derek 💪 Health & Coding 🙋‍♂️ Ask me anything 💙 Chillhop & Code 📺",
+    segmentDescription:
+      "Ask Doctor Derek 💪 Health & Coding 🙋‍♂️ Ask me anything",
+    postfix: "❓",
   },
   "Let's Learn": {
     prefix: "🏫💻🎓",
-    postfix:
-      "💯 Let's Learn: JavaScript Coursework + Commentary 💙 Chillhop & Code 📺 relaxing programming",
+    segmentDescription: "Let's Learn: JavaScript Coursework + Commentary",
+    postfix: "💯",
   },
   "Let's Blog": {
     prefix: "👨‍💻📝📘",
-    postfix:
-      "✍ Let's Blog: JavaScript Tutorials 💙 Chillhop & Code 📺 relaxing programming",
+    segmentDescription: "Let's Blog: JavaScript Tutorials",
+    postfix: "✍",
   },
   "Let's Play": {
     prefix: "👾🎮🎰",
-    postfix:
-      "🎯 Let's Play: JavaScript & CSS Games 💙 Chillhop & Code 📺 relaxing programming",
+    segmentDescription: "Let's Play: JavaScript & CSS Games",
+    postfix: "🎯",
   },
   "Let's Build Websites": {
     prefix: "🏗️🕸🔥",
-    postfix:
-      "💸 Let's Build Websites: Real Client Work 💙 Chillhop & Code 📺 relaxing programming",
+    segmentDescription: "Let's Build Websites: Real Client Work",
+    postfix: "💸",
   },
   "Pre/Post-Presentation": {
     prefix: "💙 Chillhop & Code 📺",
@@ -57,6 +63,7 @@ const populateChapterTitleMap = (props) => {
       chapterTitleMap.set(hour, {
         ...chapter,
         ...SEGMENT_LOOKUP[chapter.segment],
+        ...SHOW_CONSTANTS,
       })
       // The result is each hour is mapped to an object containing all of the properties it had before (chapter & segment) as well as the looked-up properties (the prefix and postfix) from the lookup literal object. 👍
     }

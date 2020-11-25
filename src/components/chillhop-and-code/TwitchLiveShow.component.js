@@ -13,7 +13,15 @@ const TwitchLiveShow = (props) => {
       <h2>TWITCH LIVE SHOW</h2>
       <h3>Live Twitch chapter-based categories & titles (140 characters):</h3>
       {Array.from(chapterTitleMap.entries()).map(([hour, chapter]) => {
-        const { segment, title, prefix, postfix } = chapter
+        const {
+          segment,
+          title,
+          prefix,
+          postfix,
+          segmentDescription,
+          showName,
+          showDescription,
+        } = chapter
         // Alternate categories for Twitch
         const category = CATEGORIES[hour % CATEGORIES.length]
         return (
@@ -22,7 +30,8 @@ const TwitchLiveShow = (props) => {
               Hour {hour} {segment}: {category}
             </h4>
             <h5 key="Title for Hour {hour}">
-              {prefix} {title} {postfix}
+              {prefix} {title} {postfix} {segmentDescription} {showName}{" "}
+              {showDescription}
             </h5>
           </section>
         )
