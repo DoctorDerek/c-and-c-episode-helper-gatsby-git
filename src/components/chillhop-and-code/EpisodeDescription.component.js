@@ -19,11 +19,16 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
         💙 Chillhop & Code 📺 episode #{episodeNumber} (2020-11-20)
         <br />
         {Array.from(chapterTitleMap.entries()).map(([hour, chapter]) => {
-          const { segment, title, prefix, postfix } = chapter
-
+          // Ask Doctor Derek is different in the episode description:
+          if (chapter.segment === "Ask Doctor Derek") {
+            chapter.segmentDescription = chapter.segment
+            chapter.postfix = "❓ Health & Coding 💪"
+            chapter.title = `💬 ${chapter.title} ❓`
+          }
+          const { title, prefix, postfix, segmentDescription } = chapter
           return (
             <React.Fragment key="Hour {hour}">
-              Hour {hour} {prefix} {postfix}
+              Hour {hour} {prefix} {segmentDescription} {postfix}
               <br />
               ➡️➡️➡️ {title}
               <br />
