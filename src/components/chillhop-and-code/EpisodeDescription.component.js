@@ -4,7 +4,7 @@ import populateChapterTitleMap from "./populateChapterTitleMap.helper"
 
 const EpisodeDescription = ({ episodeNumber, ...props }) => {
   const chapterTitleMap = populateChapterTitleMap(props)
-  const { courseLink } = props
+  const { courseLink, date } = props
 
   /*       
       <br />
@@ -17,7 +17,7 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
     <section key="Episode Description">
       <h2>EPISODE DESCRIPTION</h2>
       <blockquote>
-        💙 Chillhop & Code 📺 episode #{episodeNumber} (2020-11-20)
+        💙 Chillhop & Code 📺 episode #{episodeNumber} ({date})
         <br />
         {Array.from(chapterTitleMap.entries()).map(([hour, chapter]) => {
           if (chapter.segment === "Pre/Post-Presentation") {

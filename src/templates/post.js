@@ -67,6 +67,7 @@ const Post = (props) => {
               episodeNumber={episodeNumber}
               {...titlesAndSegments}
               courseLink={courseLink}
+              date={date}
             />
             <EpisodeHighlights date={date} {...titlesAndSegments} />
             <ADDHighlights />
