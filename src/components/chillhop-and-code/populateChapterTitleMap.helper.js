@@ -1,6 +1,8 @@
 const SHOW_CONSTANTS = {
   showName: "💙 Chillhop & Code 📺",
   showDescription: "relaxing programming",
+  hour0Title: `JavaScript tutorials, coursework & live
+        programming over jazzy / lo-fi beats to relax / study to`,
 }
 
 // Object literal to link each hour's segments with the title template
@@ -38,22 +40,23 @@ const SEGMENT_LOOKUP = {
 }
 
 const populateChapterTitleMap = (props) => {
+  const { FIRST_HOUR, MAX_HOURS } = props
   // Map each hour # to the content with an ES6 Map
   // instead of an object because I want to iterate
   const chapterTitleMap = new Map()
   // Add hours 0 and 9 for ease of reference:
   chapterTitleMap.set(0, {
-    title: `JavaScript tutorials, coursework & live
-        programming over jazzy / lo-fi beats to relax / study to`,
+    title: SHOW_CONSTANTS.hour0Title,
     segment: "Pre/Post-Presentation",
   })
-  for (let i = props.FIRST_HOUR; i <= props.MAX_HOURS; i++) {
+  for (let i = FIRST_HOUR; i <= MAX_HOURS; i++) {
     chapterTitleMap.set(i, {
       title: props[`titleForHour${i}`],
       segment: props[`segmentForHour${i}`],
     })
   }
-  chapterTitleMap.set(9, {
+  // Post-presentation
+  chapterTitleMap.set(MAX_HOURS + 1, {
     title: "hour0",
   })
 

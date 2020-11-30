@@ -37,37 +37,36 @@ const Post = (props) => {
     "pageContext.frontmatter.episodeNumber",
     null
   )
+  const date = _.get(props, "pageContext.frontmatter.date", null)
+  const html = htmlToReact(_.get(props, "pageContext.html", null))
+  const image = _.get(props, "pageContext.frontmatter.content_img_path", null)
+  const hideHeader = _.get(props, "pageContext.frontmatter.hide_header", null)
 
   return (
     <Layout {...props}>
-      {_.get(props, "pageContext.frontmatter.hide_header", null) === true ? (
+      {hideHeader === true ? (
         <HeaderAlt {...props} />
       ) : (
         <Header
           {...props}
           site={props.pageContext.site}
           page={props.pageContext}
-          image={_.get(props, "pageContext.frontmatter.content_img_path", null)}
+          image={image}
         />
       )}
       <div id="content" className="site-content chillhop-and-code">
         <main id="main" className="site-main inner">
           <article className="post post-full">
-            <DateHeading
-              date={_.get(props, "pageContext.frontmatter.date", null)}
-              episodeNumber={episodeNumber}
-            />
+            <DateHeading date={date} episodeNumber={episodeNumber} />
             <h3 key="Episode Notes">Episode-specific notes:</h3>
-            <blockquote className="post-content">
-              {htmlToReact(_.get(props, "pageContext.html", null))}
-            </blockquote>
+            <blockquote className="post-content">{html}</blockquote>
             <YouTubeTags />
             <TwitchLiveShow {...titlesAndSegments} />
             <EpisodeDescription
               episodeNumber={episodeNumber}
               {...titlesAndSegments}
             />
-            <EpisodeHighlights />
+            <EpisodeHighlights date={date} {...titlesAndSegments} />
             <ADDHighlights />
             <YouTubeTutorial />
           </article>
