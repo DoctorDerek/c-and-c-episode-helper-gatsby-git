@@ -1,5 +1,28 @@
 import { SHOW_CONSTANTS, SEGMENT_LOOKUP } from "./CONSTANTS.helper"
 
+/**
+ * @typedef {Object} Chapter
+ * @property {string} title - Indicates whether the Courage component is present.
+ * @property {string} segment - Indicates whether the Power component is present.
+ * @property {string} showPostfix
+ * @property {string} hour0Title
+ * @property {string} twitchTitle
+ * @property {string} youtubeTitle
+ * @property {string} segmentDescription
+ * @property {string} prefix
+ * @property {string} postfix
+ * @property {string} showName
+ * */
+
+/**
+ * returns Map of hour --> Chapter objects
+ *
+ * @param {Object} props
+ * @return {Map<number,Chapter>} ChapterTitleMap
+ */
+// Input props aren't currently specified:
+/* @param {number} props.FIRST_HOUR
+ * @param {number} props.MAX_HOURS */
 const populateChapterTitleMap = (props) => {
   const { FIRST_HOUR, MAX_HOURS } = props
   // Map each hour # to the content with an ES6 Map

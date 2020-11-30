@@ -4,7 +4,6 @@ import populateChapterTitleMap from "./populateChapterTitleMap.helper"
 
 const EpisodeDescription = ({ episodeNumber, ...props }) => {
   const chapterTitleMap = populateChapterTitleMap(props)
-
   const { courseLink } = props
 
   /*       

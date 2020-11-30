@@ -39,3 +39,17 @@ export const SEGMENT_LOOKUP = {
     postfix: "👉 DoctorDerek.com 👈",
   },
 }
+
+/**
+ * @typedef {Object} chapter
+ * @property {string} title - Indicates whether the Courage component is present.
+ * @property {string} segment - Indicates whether the Power component is present.
+ * @property {string} showPostfix
+ * @property {string} hour0Title
+ * @property {string} twitchTitle
+ * @property {string} youtubeTitle
+ * @property {string} segmentDescription
+ * @property {string} prefix
+ * @property {string} postfix
+ * @property {string} showName
+ * */
