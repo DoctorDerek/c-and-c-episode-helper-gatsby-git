@@ -45,8 +45,7 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
           )
         })}
         <br />
-        *Support the course:
-        {courseLink}
+        *Support the course: {courseLink}
         (Not an ad)
         <br />
         <br />
