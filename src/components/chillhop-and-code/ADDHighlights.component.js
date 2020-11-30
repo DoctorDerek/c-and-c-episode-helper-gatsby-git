@@ -5,6 +5,8 @@ const ADDHighlights = (props) => {
   const chapterTitleMap = populateChapterTitleMap(props)
   const { date, episodeNumber } = props
   const askDoctorDerekChapter = chapterTitleMap.get(0)
+  // TODO
+  // {Array.from(chapterTitleMap.entries()).map(([hour, chapter]) => {
   /*Array.from(chapterTitleMap.values()).find(
     (chapter) => {
       console.log(chapter)
