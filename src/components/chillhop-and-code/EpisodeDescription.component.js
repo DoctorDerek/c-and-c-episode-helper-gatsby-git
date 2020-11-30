@@ -5,6 +5,8 @@ import populateChapterTitleMap from "./populateChapterTitleMap.helper"
 const EpisodeDescription = ({ episodeNumber, ...props }) => {
   const chapterTitleMap = populateChapterTitleMap(props)
 
+  const { courseLink } = props
+
   /*       
       <br />
       Hour 1 👨‍⚕️💬🧠 Ask Doctor Derek ❓ Health & Coding 💪
@@ -22,7 +24,8 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
           if (chapter.segment === "Pre/Post-Presentation") {
             return
           }
-          // Ask Doctor Derek is different in the episode description:
+          // Ask Doctor Derek is different in the episode description
+          // compared to the on - air chapter title:
           if (chapter.segment === "Ask Doctor Derek") {
             chapter.segmentDescription = chapter.segment
             chapter.postfix = "❓ Health & Coding 💪"
@@ -43,7 +46,7 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
         })}
         <br />
         *Support the course:
-        https://www.udemy.com/course/complete-react-developer-zero-to-mastery/
+        {courseLink}
         (Not an ad)
         <br />
         <br />

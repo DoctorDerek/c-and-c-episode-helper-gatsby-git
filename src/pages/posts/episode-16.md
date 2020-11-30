@@ -18,6 +18,7 @@ segmentForHour5: "Let's Build Websites"
 segmentForHour6: hour2
 segmentForHour7: hour3
 segmentForHour8: hour4
+courseLink: "https://www.udemy.com/course/complete-react-developer-zero-to-mastery/"
 ---
 
 These are episode-specific notes.

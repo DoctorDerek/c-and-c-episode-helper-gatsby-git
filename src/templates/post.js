@@ -41,6 +41,7 @@ const Post = (props) => {
   const html = htmlToReact(_.get(props, "pageContext.html", null))
   const image = _.get(props, "pageContext.frontmatter.content_img_path", null)
   const hideHeader = _.get(props, "pageContext.frontmatter.hide_header", null)
+  const courseLink = _.get(props, "pageContext.frontmatter.courseLink", null)
 
   return (
     <Layout {...props}>
@@ -65,6 +66,7 @@ const Post = (props) => {
             <EpisodeDescription
               episodeNumber={episodeNumber}
               {...titlesAndSegments}
+              courseLink={courseLink}
             />
             <EpisodeHighlights date={date} {...titlesAndSegments} />
             <ADDHighlights />
