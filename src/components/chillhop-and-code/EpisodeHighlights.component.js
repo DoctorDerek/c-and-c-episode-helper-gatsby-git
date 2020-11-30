@@ -1,6 +1,7 @@
 import React from "react"
+import { SHOW_CONSTANTS, SEGMENT_LOOKUP } from "./CONSTANTS.helper"
 
-const EpisodeHighlights = () => (
+const EpisodeHighlights = ({ date }) => (
   <section>
     <br />
     <h2>EPISODE HIGHLIGHTS</h2>
@@ -8,15 +9,21 @@ const EpisodeHighlights = () => (
     <h3>Twitch title (140 characters):</h3>
     <br />
     <h4>
-      💙 Chillhop & Code 📺 2020-11-20 JavaScript tutorials, coursework &
-      programming + jazzy/lo-fi beats to relax/study to 👉 DoctorDerek.com 👈
+      {SHOW_CONSTANTS.showName}
+      💙 Chillhop & Code 📺
+      {date}
+      {SHOW_CONSTANTS.twitchTitle}
+      {SEGMENT_LOOKUP["Pre/Post-Presentation"].postfix}
     </h4>
     <br />
     <h3>YouTube title (100 characters):</h3>
     <br />
     <h4>
-      💙 Chillhop & Code 📺 2020-11-20 JavaScript tutorials, coursework &
-      programming + jazzy/lo-fi beats
+      {SHOW_CONSTANTS.showName}
+      💙 Chillhop & Code 📺
+      {date}
+      {SHOW_CONSTANTS.youtubeTitle}
+      {SEGMENT_LOOKUP["Pre/Post-Presentation"].postfix}
     </h4>
   </section>
 )
