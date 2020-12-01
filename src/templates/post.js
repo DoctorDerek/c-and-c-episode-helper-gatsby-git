@@ -63,14 +63,18 @@ const Post = (props) => {
             <blockquote className="post-content">{html}</blockquote>
             <YouTubeTags />
             <TwitchLiveShow {...titlesAndSegments} />
+            <EpisodeHighlights date={date} {...titlesAndSegments} />
             <EpisodeDescription
+              date={date}
               episodeNumber={episodeNumber}
               {...titlesAndSegments}
               courseLink={courseLink}
-              date={date}
             />
-            <EpisodeHighlights date={date} {...titlesAndSegments} />
-            <ADDHighlights />
+            <ADDHighlights
+              date={date}
+              episodeNumber={episodeNumber}
+              {...titlesAndSegments}
+            />
             <YouTubeTutorial />
           </article>
         </main>
