@@ -1,9 +1,13 @@
 import React from "react"
+import DateWithDayName from "./DateWithDayName.component"
 
-const YouTubeTutorial = () => (
+const YouTubeTutorial = ({ date }) => (
   <section>
     <br />
-    <h2>YOUTUBE TUTORIAL</h2>
+    <h2>
+      YOUTUBE TUTORIAL
+      <DateWithDayName date={date} />
+    </h2>
     <br />
     <h3>Twitch title (140 characters):</h3>
     <h4>

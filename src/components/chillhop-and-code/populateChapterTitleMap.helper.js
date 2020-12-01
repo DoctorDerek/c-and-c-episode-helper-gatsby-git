@@ -12,6 +12,7 @@ import { SHOW_CONSTANTS, SEGMENT_LOOKUP } from "./CONSTANTS.helper"
  * @property {string} prefix
  * @property {string} postfix
  * @property {string} showName
+ * @property {string} showDescription
  * */
 
 /**

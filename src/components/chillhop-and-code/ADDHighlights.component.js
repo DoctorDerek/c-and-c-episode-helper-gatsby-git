@@ -1,9 +1,9 @@
 import React from "react"
+import DateWithDayName from "./DateWithDayName.component"
 import populateChapterTitleMap from "./populateChapterTitleMap.helper"
 
-const ADDHighlights = (props) => {
+const ADDHighlights = ({ date, episodeNumber, ...props }) => {
   const chapterTitleMap = populateChapterTitleMap(props)
-  const { date, episodeNumber } = props
   const askDoctorDerekChapter = Array.from(chapterTitleMap.values()).find(
     (chapter) => chapter.segment === "Ask Doctor Derek"
   )
@@ -12,7 +12,10 @@ const ADDHighlights = (props) => {
     return (
       <section>
         <br />
-        <h2>ADD HIGHLIGHTS</h2>
+        <h2>
+          ASK DOCTOR DEREK TITLES
+          <DateWithDayName date={date} />
+        </h2>
         <br />
         <h3>Twitch title (140 characters):</h3>
         <br />
@@ -26,6 +29,11 @@ const ADDHighlights = (props) => {
         <h4>
           {prefix} {title} {postfix} {segment} 💪 {date}
         </h4>
+        <br />
+        <h2>
+          ASK DOCTOR DEREK DESCRIPTION
+          <DateWithDayName date={date} />
+        </h2>
         <br />
         <blockquote>
           Ask Doctor Derek episode #{episodeNumber} ({date})
@@ -96,7 +104,12 @@ const ADDHighlights = (props) => {
       </section>
     )
   } else {
-    return <h2>Ask Doctor Derek not found</h2>
+    return (
+      <h2>
+        Ask Doctor Derek not found
+        <DateWithDayName date={date} />
+      </h2>
+    )
   }
 }
 export default ADDHighlights

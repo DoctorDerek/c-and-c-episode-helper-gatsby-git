@@ -1,16 +1,20 @@
 import React from "react"
+import DateWithDayName from "./DateWithDayName.component"
 
 import populateChapterTitleMap from "./populateChapterTitleMap.helper"
 
 // Categories alternate every hour to create "chapters" on Twitch
 const CATEGORIES = ["Science & Technology", "Just Chatting"]
 
-const TwitchLiveShow = (props) => {
+const TwitchLiveShow = ({ date, ...props }) => {
   const chapterTitleMap = populateChapterTitleMap(props)
 
   return (
     <section key="Twitch Live Show">
-      <h2>TWITCH LIVE SHOW</h2>
+      <h2>
+        TWITCH LIVE SHOW
+        <DateWithDayName date={date} />
+      </h2>
       <h3>Live Twitch chapter-based categories & titles (140 characters):</h3>
       {Array.from(chapterTitleMap.entries()).map(([hour, chapter]) => {
         const {

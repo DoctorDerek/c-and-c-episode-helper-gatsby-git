@@ -1,5 +1,5 @@
 import React from "react"
-
+import DateWithDayName from "./DateWithDayName.component"
 import populateChapterTitleMap from "./populateChapterTitleMap.helper"
 
 const EpisodeDescription = ({ episodeNumber, ...props }) => {
@@ -15,7 +15,10 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
 
   return (
     <section key="Episode Description">
-      <h2>EPISODE DESCRIPTION</h2>
+      <h2>
+        EPISODE DESCRIPTION
+        <DateWithDayName date={date} />
+      </h2>
       <blockquote>
         💙 Chillhop & Code 📺 episode #{episodeNumber} ({date})
         <br />

@@ -1,10 +1,14 @@
 import React from "react"
 import { SHOW_CONSTANTS, SEGMENT_LOOKUP } from "./CONSTANTS.helper"
+import DateWithDayName from "./DateWithDayName.component"
 
-const EpisodeHighlights = ({ date }) => (
+const EpisodeTitles = ({ date }) => (
   <section>
     <br />
-    <h2>EPISODE HIGHLIGHTS</h2>
+    <h2>
+      EPISODE TITLES
+      <DateWithDayName date={date} />
+    </h2>
     <br />
     <h3>Twitch title (140 characters):</h3>
     <br />
@@ -22,4 +26,4 @@ const EpisodeHighlights = ({ date }) => (
   </section>
 )
 
-export default EpisodeHighlights
+export default EpisodeTitles

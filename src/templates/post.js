@@ -12,7 +12,7 @@ import Footer from "../components/Footer"
 import ADDHighlights from "../components/chillhop-and-code/ADDHighlights.component"
 import DateHeading from "../components/chillhop-and-code/DateHeading.component"
 import EpisodeDescription from "../components/chillhop-and-code/EpisodeDescription.component"
-import EpisodeHighlights from "../components/chillhop-and-code/EpisodeHighlights.component"
+import EpisodeTitles from "../components/chillhop-and-code/EpisodeTitles.component"
 import TwitchLiveShow from "../components/chillhop-and-code/TwitchLiveShow.component"
 import YouTubeTags from "../components/chillhop-and-code/YouTubeTags.component"
 import YouTubeTutorial from "../components/chillhop-and-code/YouTubeTutorial.component"
@@ -62,8 +62,8 @@ const Post = (props) => {
             <h3 key="Episode Notes">Episode-specific notes:</h3>
             <blockquote className="post-content">{html}</blockquote>
             <YouTubeTags />
-            <TwitchLiveShow {...titlesAndSegments} />
-            <EpisodeHighlights date={date} {...titlesAndSegments} />
+            <TwitchLiveShow date={date} {...titlesAndSegments} />
+            <EpisodeTitles date={date} {...titlesAndSegments} />
             <EpisodeDescription
               date={date}
               episodeNumber={episodeNumber}
@@ -75,7 +75,7 @@ const Post = (props) => {
               episodeNumber={episodeNumber}
               {...titlesAndSegments}
             />
-            <YouTubeTutorial />
+            <YouTubeTutorial date={date} />
           </article>
         </main>
         <Footer {...props} />
