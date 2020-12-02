@@ -79,13 +79,7 @@ const Post = (props) => {
             />
             <section>
               {tutorials.map((tutorial) => (
-                <YouTubeTutorial
-                  date={date}
-                  tutorialTitle={tutorial.title}
-                  tutorialSubtitle={tutorial.subtitle}
-                  tutorialLink={tutorial.link}
-                  tutorialNumber={tutorial.number}
-                />
+                <YouTubeTutorial date={date} tutorial={tutorial} />
               ))}
             </section>
           </article>
