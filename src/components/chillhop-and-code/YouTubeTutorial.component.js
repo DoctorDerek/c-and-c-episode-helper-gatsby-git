@@ -2,12 +2,10 @@ import React from "react"
 import DateWithDayName from "./DateWithDayName.component"
 
 /**
- *
- *
- * @param {*} props {
- *   date,
- *   {Tutorial} tutorial
- * }
+ * @typedef {import('./populateTutorials.helper.js').Tutorial} Tutorial
+ * @param {Object} props
+ * @param {any} props.date
+ * @param {Tutorial} props.tutorial
  */
 const YouTubeTutorial = ({ date, tutorial }) => {
   const { title, subtitle, link, number } = tutorial
