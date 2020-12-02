@@ -17,6 +17,7 @@ import TwitchLiveShow from "../components/chillhop-and-code/TwitchLiveShow.compo
 import YouTubeTags from "../components/chillhop-and-code/YouTubeTags.component"
 import YouTubeTutorial from "../components/chillhop-and-code/YouTubeTutorial.component"
 import populateTitlesAndSegments from "../components/chillhop-and-code/populateTitlesAndSegments.helper"
+import populateTutorials from "../components/chillhop-and-code/populateTutorials.helper"
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
 // any changes to content files are reflected in browser
@@ -30,6 +31,7 @@ export const query = graphql`
 
 const Post = (props) => {
   const titlesAndSegments = populateTitlesAndSegments(props)
+  const tutorials = populateTutorials(props)
 
   // Retrieve some props from the front matter using lodash:
   const episodeNumber = _.get(
@@ -42,21 +44,6 @@ const Post = (props) => {
   const image = _.get(props, "pageContext.frontmatter.content_img_path", null)
   const hideHeader = _.get(props, "pageContext.frontmatter.hide_header", null)
   const courseLink = _.get(props, "pageContext.frontmatter.courseLink", null)
-  const tutorialTitle = _.get(
-    props,
-    "pageContext.frontmatter.tutorialTitle",
-    null
-  )
-  const tutorialSubtitle = _.get(
-    props,
-    "pageContext.frontmatter.tutorialSubtitle",
-    null
-  )
-  const tutorialLink = _.get(
-    props,
-    "pageContext.frontmatter.tutorialLink",
-    null
-  )
 
   return (
     <Layout {...props}>
@@ -90,12 +77,17 @@ const Post = (props) => {
               episodeNumber={episodeNumber}
               {...titlesAndSegments}
             />
-            <YouTubeTutorial
-              date={date}
-              tutorialTitle={tutorialTitle}
-              tutorialSubtitle={tutorialSubtitle}
-              tutorialLink={tutorialLink}
-            />
+            <section>
+              {tutorials.map((tutorial) => (
+                <YouTubeTutorial
+                  date={date}
+                  tutorialTitle={tutorial.title}
+                  tutorialSubtitle={tutorial.subtitle}
+                  tutorialLink={tutorial.link}
+                  tutorialNumber={tutorial.number}
+                />
+              ))}
+            </section>
           </article>
         </main>
         <Footer {...props} />

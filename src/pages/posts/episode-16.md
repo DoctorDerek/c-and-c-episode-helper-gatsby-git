@@ -22,6 +22,12 @@ courseLink: "https://www.udemy.com/course/complete-react-developer-zero-to-maste
 tutorialTitle: How to Find Unique Values by Property in an Array of Objects in JavaScript
 tutorialSubtitle: Let's find the distinct values for a given property among all of the JavaScript objects in an array in this short tutorial.
 tutorialLink: https://medium.com/p/50ca23db8ccc/
+tutorial1Title: 1
+tutorial1Subtitle: 1
+tutorial1Link: 1
+tutorial3Title: 3
+tutorial3Subtitle: 3
+tutorial3Link: 3
 ---
 
 These are episode-specific notes.

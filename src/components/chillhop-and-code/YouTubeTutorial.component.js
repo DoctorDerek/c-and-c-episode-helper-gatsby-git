@@ -6,11 +6,12 @@ const YouTubeTutorial = ({
   tutorialTitle,
   tutorialSubtitle,
   tutorialLink,
+  tutorialNumber,
 }) => (
-  <section>
+  <section key={Math.random()}>
     <br />
     <h2>
-      YOUTUBE TUTORIAL
+      YOUTUBE TUTORIAL #{tutorialNumber}
       <DateWithDayName date={date} />
     </h2>
     <br />
@@ -23,7 +24,7 @@ const YouTubeTutorial = ({
     <h4>👨‍💻📝📘 {tutorialTitle} 🏫💻🎓</h4>
 
     <h2>
-      TUTORIAL DESCRIPTION
+      TUTORIAL #{tutorialNumber} DESCRIPT.
       <DateWithDayName date={date} />
     </h2>
 

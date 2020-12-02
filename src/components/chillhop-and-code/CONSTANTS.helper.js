@@ -4,6 +4,8 @@ export const SHOW_CONSTANTS = {
   hour0Title: `JavaScript tutorials, coursework & live programming over jazzy / lo-fi beats to relax / study to`,
   twitchTitle: `JavaScript tutorials, coursework & programming + jazzy/lo-fi beats to relax/study to`,
   youtubeTitle: `JavaScript tutorials, coursework & programming + jazzy/lo-fi beats`,
+  FIRST_HOUR: 1,
+  MAX_HOURS: 8,
 }
 
 // Object literal to link each hour's segments with the title template

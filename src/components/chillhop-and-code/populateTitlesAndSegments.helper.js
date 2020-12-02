@@ -1,7 +1,11 @@
 import _ from "lodash"
+import { SHOW_CONSTANTS } from "./CONSTANTS.helper"
 
 const populateTitlesAndSegments = (props) => {
-  const titlesAndSegments = { FIRST_HOUR: 1, MAX_HOURS: 8 }
+  const titlesAndSegments = {
+    FIRST_HOUR: SHOW_CONSTANTS.FIRST_HOUR,
+    MAX_HOURS: SHOW_CONSTANTS.MAX_HOURS,
+  }
 
   for (
     let i = titlesAndSegments.FIRST_HOUR;
