@@ -13,7 +13,7 @@ const ADDHighlights = ({ date, episodeNumber, ...props }) => {
       <section>
         <br />
         <h2>
-          ADD TITLES
+          ASK DOCTOR DEREK
           <DateWithDayName date={date} />
         </h2>
         <br />
