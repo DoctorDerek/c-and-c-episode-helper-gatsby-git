@@ -1,7 +1,12 @@
 import React from "react"
 import DateWithDayName from "./DateWithDayName.component"
 
-const YouTubeTutorial = ({ date }) => (
+const YouTubeTutorial = ({
+  date,
+  tutorialTitle,
+  tutorialSubtitle,
+  tutorialLink,
+}) => (
   <section>
     <br />
     <h2>
@@ -11,24 +16,24 @@ const YouTubeTutorial = ({ date }) => (
     <br />
     <h3>Twitch title (140 characters):</h3>
     <h4>
-      👨‍💻📝📘 How to Find Unique Values by Property in an Array of Objects in
-      JavaScript 💙 Programming Tutorials 👉 DoctorDerek.com 👈
+      👨‍💻📝📘 {tutorialTitle} 💙 Programming Tutorials 👉 DoctorDerek.com 👈
     </h4>
 
     <h3>YouTube title (100 characters):</h3>
-    <h4>
-      👨‍💻📝📘 How to Find Unique Values by Property in an Array of Objects 💙
-      JavaScript Tutorial 🏫💻🎓
-    </h4>
+    <h4>👨‍💻📝📘 {tutorialTitle} 🏫💻🎓</h4>
+
+    <h2>
+      TUTORIAL DESCRIPTION
+      <DateWithDayName date={date} />
+    </h2>
 
     <blockquote>
-      Let's find the distinct values for a given property among all of the
-      JavaScript objects in an array in this short tutorial.
+      {tutorialSubtitle}
       <br />
       <br />
       👀 Read the article at Medium 🎓
       <br />
-      https://medium.com/p/50ca23db8ccc/
+      {tutorialLink}
       <br />
       <br />
       💙 Chillhop & Code on Twitch 📺

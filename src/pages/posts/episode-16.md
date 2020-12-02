@@ -19,6 +19,9 @@ segmentForHour6: hour2
 segmentForHour7: hour3
 segmentForHour8: hour4
 courseLink: "https://www.udemy.com/course/complete-react-developer-zero-to-mastery/"
+tutorialTitle: How to Find Unique Values by Property in an Array of Objects in JavaScript
+tutorialSubtitle: Let's find the distinct values for a given property among all of the JavaScript objects in an array in this short tutorial.
+tutorialLink: https://medium.com/p/50ca23db8ccc/
 ---
 
 These are episode-specific notes.

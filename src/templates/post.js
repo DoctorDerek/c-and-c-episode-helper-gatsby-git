@@ -42,6 +42,21 @@ const Post = (props) => {
   const image = _.get(props, "pageContext.frontmatter.content_img_path", null)
   const hideHeader = _.get(props, "pageContext.frontmatter.hide_header", null)
   const courseLink = _.get(props, "pageContext.frontmatter.courseLink", null)
+  const tutorialTitle = _.get(
+    props,
+    "pageContext.frontmatter.tutorialTitle",
+    null
+  )
+  const tutorialSubtitle = _.get(
+    props,
+    "pageContext.frontmatter.tutorialSubtitle",
+    null
+  )
+  const tutorialLink = _.get(
+    props,
+    "pageContext.frontmatter.tutorialLink",
+    null
+  )
 
   return (
     <Layout {...props}>
@@ -75,7 +90,12 @@ const Post = (props) => {
               episodeNumber={episodeNumber}
               {...titlesAndSegments}
             />
-            <YouTubeTutorial date={date} />
+            <YouTubeTutorial
+              date={date}
+              tutorialTitle={tutorialTitle}
+              tutorialSubtitle={tutorialSubtitle}
+              tutorialLink={tutorialLink}
+            />
           </article>
         </main>
         <Footer {...props} />
