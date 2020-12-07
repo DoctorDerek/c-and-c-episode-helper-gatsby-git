@@ -8,6 +8,8 @@ const CATEGORIES = ["Science & Technology", "Just Chatting"]
 
 const TwitchLiveShow = ({ date, ...props }) => {
   const chapterTitleMap = populateChapterTitleMap(props)
+  let categoryToggle = 1 // starts at 1
+  let lastSegment
 
   return (
     <section key="Twitch Live Show">
@@ -27,7 +29,11 @@ const TwitchLiveShow = ({ date, ...props }) => {
           showDescription,
         } = chapter
         // Alternate categories for Twitch
-        const category = CATEGORIES[hour % CATEGORIES.length]
+        if (lastSegment !== segment) {
+          categoryToggle += 1
+        }
+        const category = CATEGORIES[categoryToggle % CATEGORIES.length]
+        lastSegment = segment
         return (
           <section>
             <h4 key="Label for Hour {hour}">
