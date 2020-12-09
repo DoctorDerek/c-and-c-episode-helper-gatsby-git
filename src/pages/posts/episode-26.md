@@ -19,8 +19,10 @@ titleForHour7: "Commentary on: React - Test Driven Dev. by @dkcodehelper"
 courseLink: "https://www.udemy.com/course/react-tdd/"
 segmentForHour8: "Let's Play"
 titleForHour8: "Let's Play: Screeps (JavaScript / TypeScript MMO Strategy)"
+tutorialTitle: "How to Find Unique Objects in an Array in JavaScript by Object Reference or Key-Value Pairs"
+tutorialSubtitle: 'I''ll use Set to remove duplicate objects from an array by "object reference" - meaning removing objects if they have been added to an array multiple times. Then, I''ll find objects by looking at key-value pairs to compare their contents.'
 ---
 
 🌟Another banger 🌟 Looking good! You are amazing! You rock! 😊👏🙌
 
-"Ace of Wands"! This is it! You're fantastic!! First show of the new format!
+"Queen of Swords" after "Ace of Wands"! This is it! You're fantastic!! First show of the new format!
