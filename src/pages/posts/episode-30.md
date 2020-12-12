@@ -1,11 +1,11 @@
 ---
-date: "2020-12-09"
-episodeNumber: 28
+date: "2020-12-11"
+episodeNumber: 30
 template: post
 segmentForHour1: "Ask Doctor Derek"
-titleForHour1: "What Are Best Practices for Code Reviews?"
+titleForHour1: "Search Engine Optimization (SEO) for Medium Writers"
 segmentForHour2: "Let's Blog"
-titleForHour2: "Joining Arrays Together in JavaScript"
+titleForHour2: "JavaScript Unique Objects, Values, IDs & React Keys"
 segmentForHour3: hour2
 titleForHour3: hour2
 segmentForHour4: hour2
@@ -19,11 +19,11 @@ titleForHour7: "Commentary on: React - Test Driven Dev. by @dkcodehelper"
 courseLink: "https://www.udemy.com/course/react-tdd/"
 segmentForHour8: "Let's Play"
 titleForHour8: "Let's Play: Screeps (JavaScript / TypeScript MMO Strategy)"
-tutorialTitle: "How to Join Two Arrays Together in JavaScript"
-tutorialSubtitle: "Need to combine two arrays into one array? Here’s how you join arrays together in JavaScript, something that is known formally as “array concatenation.”"
-tutorialLink: "https://medium.com/p/fb0707d20d12"
+tutorialTitle: "What is Screen Case in Computer Programming? (SCREEN_CASE)"
+tutorialSubtitle: "For programming, ALL CAPS ISN'T YELLING, but it is less legible. SCREEN_CASE is commonly used for constants."
+tutoralLink: "https://medium.com/p/56254b769e3"
 ---
 
 🌟 Another banger! 🌟 You rock! 😊👏🙌
 
-"Temperance"! A little bit at a time 👍
+"The Magician"! You're magical 🧝‍♂️

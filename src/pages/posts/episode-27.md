@@ -21,6 +21,7 @@ segmentForHour8: "Let's Play"
 titleForHour8: "Let's Play: Screeps (JavaScript / TypeScript MMO Strategy)"
 tutorialTitle: "Destructure React Props with ES6 Object Destructuring for Cleaner Code"
 tutorialSubtitle: 'When you write a render function for a component in React, it takes in a props object containing the properties ("props") that you''ll use to configure that component. Props make components reusable. To write cleaner code, you can destructure the props object into separate variables using ES6 object destructuring.'
+tutorialLink: "https://medium.com/p/3984453e484d"
 ---
 
 🌟Another banger 🌟 You rock! 😊👏🙌

@@ -21,6 +21,7 @@ segmentForHour8: "Let's Play"
 titleForHour8: "Let's Play: Screeps (JavaScript / TypeScript MMO Strategy)"
 tutorialTitle: "How to Find Unique Objects in an Array in JavaScript by Object Reference or Key-Value Pairs"
 tutorialSubtitle: 'I''ll use Set to remove duplicate objects from an array by "object reference" - meaning removing objects if they have been added to an array multiple times. Then, I''ll find objects by looking at key-value pairs to compare their contents.'
+tutorialLink: "https://medium.com/p/131338898d7a/"
 ---
 
 🌟Another banger 🌟 Looking good! You are amazing! You rock! 😊👏🙌
