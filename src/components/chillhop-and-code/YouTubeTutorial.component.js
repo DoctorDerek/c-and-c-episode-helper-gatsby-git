@@ -21,7 +21,7 @@ const YouTubeTutorial = ({ date, tutorial }) => {
       <h4>👨‍💻📝📘 {title} 💙 Programming Tutorials 👉 DoctorDerek.com 👈</h4>
 
       <h3>YouTube title (100 characters):</h3>
-      <h4>👨‍💻📝📘 {title} 🏫💻🎓</h4>
+      <h4>👨‍💻📝📘 {title} 💙 Programming Tutorial 🏫💻🎓</h4>
 
       <h2>
         TUTORIAL #{number} DESCRIPT.
