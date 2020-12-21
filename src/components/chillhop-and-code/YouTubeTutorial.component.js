@@ -44,7 +44,7 @@ const YouTubeTutorial = ({ date, tutorial }) => {
         <br />
         🧠 Read my blog at Medium 🥳
         <br />
-        https://DoctorDerek.Medium.com
+        https://DoctorDerek.medium.com
         <br />
         <br />
         📧 Join my email list 🆓
