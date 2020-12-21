@@ -3,7 +3,7 @@ date: "2020-12-09"
 episodeNumber: 28
 template: post
 segmentForHour1: "Ask Doctor Derek"
-titleForHour1: "What Are Best Practices for Code Reviews?"
+titleForHour1: "What Are Best Practices for Code Reviews"
 segmentForHour2: "Let's Blog"
 titleForHour2: "Joining Arrays Together in JavaScript"
 segmentForHour3: hour2
