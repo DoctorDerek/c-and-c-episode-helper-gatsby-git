@@ -92,8 +92,7 @@ const YouTubeTutorial = ({ date, tutorial }) => {
         About Chillhop & Code: Chillhop & Code teaches JavaScript programming to
         web developers over jazzy / lofi hip hop beats to relax / study to.
         Starring Dr. Derek Austin 🥳 (The physical therapist who writes
-        JavaScript) and Computer 🤖 (The Australian rapping robot) 👨‍⚕️💬🧠 Ask me
-        anything 👉 DoctorDerek.com 👈
+        JavaScript).
         <br />
       </blockquote>
     </section>
