@@ -77,7 +77,7 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
         <br />
         📧 Join my email list 🆓
         <br />
-        https://tinyletter.com/DoctorDerek
+        https://DoctorDerek.com/email
         <br />
         ⬆ Get free access to all of my Medium articles 👍
         <br />
