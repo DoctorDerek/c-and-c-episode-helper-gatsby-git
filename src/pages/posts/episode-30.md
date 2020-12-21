@@ -21,7 +21,7 @@ segmentForHour8: "Let's Play"
 titleForHour8: "Let's Play: Screeps (JavaScript / TypeScript MMO Strategy)"
 tutorialTitle: "What is Screen Case in Computer Programming? (SCREEN_CASE)"
 tutorialSubtitle: "For programming, ALL CAPS ISN'T YELLING, but it is less legible. SCREEN_CASE is commonly used for constants."
-tutoralLink: "https://medium.com/p/56254b769e3"
+tutorialLink: "https://medium.com/p/56254b769e3"
 ---
 
 🌟 Another banger! 🌟 You rock! 😊👏🙌
