@@ -3,7 +3,7 @@ date: "2020-12-10"
 episodeNumber: 29
 template: post
 segmentForHour1: "Ask Doctor Derek"
-titleForHour1: "What's the New Route API in Gatsby for Page Routing?"
+titleForHour1: "What's the New Route API in Gatsby for Page Routing"
 segmentForHour2: "Let's Blog"
 titleForHour2: "Joining Arrays Together in JavaScript"
 segmentForHour3: hour2
