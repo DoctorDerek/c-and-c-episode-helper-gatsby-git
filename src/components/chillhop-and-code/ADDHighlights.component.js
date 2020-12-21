@@ -63,7 +63,7 @@ const ADDHighlights = ({ date, episodeNumber, ...props }) => {
           👨‍⚕️💬🧠 Ask me anything 👉 DoctorDerek.com 👈 @AskDoctorDerek 💙
           <br />
           <br />
-          👀 Livestreaming weekdays on Twitch 📺
+          👀 Livestreaming on Twitch 📺
           https://twitch.tv/ChillhopAndCode/ 💙
           <br />
           <br />

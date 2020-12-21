@@ -54,8 +54,7 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
         👨‍⚕️💬🧠 Ask me anything 👉 DoctorDerek.com 👈 @ChillhopAndCode 💙
         <br />
         <br />
-        👀 Livestreaming weekdays on Twitch 📺
-        https://twitch.tv/ChillhopAndCode/ 💙
+        👀 Livestreaming on Twitch 📺 https://twitch.tv/ChillhopAndCode/ 💙
         <br />
         <br />
         About Chillhop & Code: Chillhop & Code teaches JavaScript programming to
