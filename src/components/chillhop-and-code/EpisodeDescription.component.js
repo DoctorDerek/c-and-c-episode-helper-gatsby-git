@@ -47,8 +47,7 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
           )
         })}
         <br />
-        *Support the course: {courseLink}
-        (Not an ad)
+        *Support the course: {courseLink} (Not an ad)
         <br />
         <br />
         👨‍⚕️💬🧠 Ask me anything 👉 DoctorDerek.com 👈 @ChillhopAndCode 💙
