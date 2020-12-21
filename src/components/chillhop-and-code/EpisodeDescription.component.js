@@ -82,9 +82,9 @@ const EpisodeDescription = ({ episodeNumber, ...props }) => {
         ⬆ Get free access to all of my Medium articles 👍
         <br />
         <br />
-        🙏 Support me on Patreon 💸
+        🙏 Subscribe to my YouTube channel 💸
         <br />
-        https://patreon.com/DoctorDerek
+        https://DoctorDerek.com/YouTube
         <br />
         <br />
         🎶 Music by Chillhop Music 🎧
